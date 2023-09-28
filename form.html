@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="styles/nav.css">
 
     <style>
+        body{
+            margin: 0px;
+        }
         
         form fieldset p :hover{
             color: black;
@@ -14,9 +17,39 @@
             padding: 4px 6px;
             border-radius: 3px ;
         }
-        form fieldset p{
-            display: inline-block;
+        .grid-container{
+            display: grid;
+            grid-template-columns: repeat(4,150px);
+
         }
+        #select-pitha{
+            font-size: 25px;
+            color: chocolate;
+            font-weight:bold;
+
+        }
+        #select-vorta{
+            font-size: 25px;
+            color: chartreuse;
+            font-weight:bold;
+        }
+        header nav ul a{
+            font-size: 1.2em;
+            color: white;
+            padding-right: 15px;
+        }
+        nav{
+            background-color: blue;
+            padding: 10px 0px;
+        }
+        form{
+            padding-left: 20px;
+        }
+        header h1{
+            padding: 20px;
+        }
+
+        
 
     </style>
 </head>
@@ -38,8 +71,8 @@
         <p>Name :<input type="text" name="" placeholder="Enter your name"id=""></p>
         <p>Email : <input type="email" name="Email" 
             placeholder="Enter your email" id=""></p>
-            <fieldset>
-                <legend>Please select your pitha</legend>
+            <fieldset class="grid-container">
+                <legend id="select-pitha">Please select your pitha</legend>
 
                 <p>
                     <label for="Chitoi"><input type="radio" name="pitha"   id="Chitoi">Chitoi
@@ -71,9 +104,9 @@
 
             </fieldset>
 
-            <fieldset>
+            <fieldset class="grid-container">
 
-                <legend>Selects your vorta</legend>
+                <legend id="select-vorta">Selects your vorta</legend>
 
                 <p>
                     <label for="chypa shutki"><input type="checkbox" name="vorta"id="chypa shutki">Chypa shutki</label>
